@@ -132,9 +132,12 @@ USE_TZ = True
 # Static fles (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
-STATIC_ROOT =os.path.join(PROJECT_ROOT, 'staticfiles')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_URL = '/media/'
+
