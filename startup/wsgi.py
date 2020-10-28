@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 from whitenoise import WhiteNoise
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'startup.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'startup.startup.settings')
 
 application = WhiteNoise(get_wsgi_application())
